@@ -1,0 +1,32 @@
+<!--pages/index/index.wxml-->
+<view class="header">
+  <button class="btn" bindtap="callPhone">
+    <image src="/images/phone.png" style="width:18px;height:18px;"></image>
+  </button>
+  <navigator url="/pages/search/search">
+    <icon type="search" size="14"></icon>
+  </navigator>
+  <button class="btn" open-type="share">
+    <image src="/images/share.png" style="width:20px;height:20px;"></image>
+  </button>
+</view>
+<swiper indicator-dots='{{indicatorDots}}' indicator-color='rgba(255,255,255,0.5)' indicator-active-color='#fff' autoplay="true" circular='true'>
+  <block wx:for="{{imgUrls}}" wx:key="contentId" wx:for-item="data" wx:for-index="ind">
+    <swiper-item>
+      <image bindtap="toH5Page" data-url="{{data.url}}" src="{{data.photoUrl}}" id="{{ind}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view>
+  <text>最新课程</text>
+</view>
+<view class="container">
+<block wx:for="{{lession}}" wx:key="id">
+  <lesson-cmp lesson="{{item}}" data-item="{{item}}" bind:myEvent="onMyEvent"></lesson-cmp>
+</block>
+  <!-- <view class="item" wx:for="{{lession}}" wx:key="id">
+    <image src="{{item.poster}}" mode="widthFix"></image>
+    <text>{{item.title}}</text>
+    <text>{{item.price}}</text>
+  </view> -->
+</view>

@@ -1,0 +1,5 @@
+<!--components/no-data/index.wxml-->
+<view class="none">
+  <image class="no-data" src="/images/no-data.png" mode="widthFix"></image>
+  <view class="none-tips">~暂无数据~</view>
+</view>

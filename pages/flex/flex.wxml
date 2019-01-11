@@ -1,0 +1,6 @@
+<!--pages/flex/flex.wxml-->
+<view class="conainer">
+  <view class="item">1</view>
+  <view class="item">2</view>
+  <view class="item">3</view>
+</view>

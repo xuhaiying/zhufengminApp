@@ -1,0 +1,19 @@
+/* components/lesson/index.wxss */
+.item {
+  width: 355rpx;
+  margin: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px #ddd;
+  box-sizing: border-box;
+}
+.item image{
+  width: 100%;
+}
+.item text{
+  padding: 20rpx 0;
+}

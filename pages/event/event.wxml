@@ -1,0 +1,10 @@
+<!--pages/event/event.wxml-->
+<!-- bind事件绑定不会阻止事件冒泡 -->
+<!-- catch事件绑定可以阻止事件冒泡 -->
+<!-- dataset 是事件源组件上data-开头的自定义属性组成的集合 -->
+<!-- 以data-开头，多个单词有连接符-连接，不能有大写（大写会自动转出小写） -->
+<!-- data-msg-hello这种形式最终会在dataset中将连字符转出驼峰命名 -->
+<view id="outside" data-msgHell="hello"  class="outside" bind:tap="outside">outside
+  <!-- <view id="inside" data-msgHell="hello" data-msg-hello="world" class="inside" catch:touchstart="inside">inside</view> -->
+  <view id="inside" data-msgHell="hello"  class="inside">inside</view>
+</view>

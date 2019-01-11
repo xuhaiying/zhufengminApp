@@ -1,0 +1,11 @@
+/* pages/event/event.wxss */
+.outside{
+  width: 200px;
+  height: 200px;
+  background: gold;
+}
+.inside{
+  width: 100px;
+  height: 100px;
+  background: lightcoral;
+}

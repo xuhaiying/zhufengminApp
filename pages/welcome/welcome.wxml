@@ -1,0 +1,13 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <!-- <open-data class="avatarUrl" type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data> -->
+<button class="authorize" wx:if="{{!authorized}}" open-type='getUserInfo' bindgetuserinfo='onGetUserInfo'>
+<image src="/images/weixin.png"></image>
+点击授权
+</button>
+<view wx:else bindtap='onToIndexPage'>
+<image src="{{userInfo.avatarUrl}}"></image>
+<text>{{userInfo.nickName}}</text>
+</view>
+</view>

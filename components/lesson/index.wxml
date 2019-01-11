@@ -1,0 +1,6 @@
+<!--components/lesson/index.wxml-->
+<view class="item" bindtap="onTap">
+  <image src="{{lesson.poster}}" mode="widthFix"></image>
+  <text>{{lesson.title}}</text>
+  <text>{{lesson.price}}</text>
+</view>

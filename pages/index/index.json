@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#ff0",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "lesson-cmp":"/components/lesson/index"
+  }
+}

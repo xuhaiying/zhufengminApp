@@ -1,0 +1,9 @@
+{
+  "usingComponents":{
+    "lesson-cmp":"/components/lesson/index",
+    "no-data-cmp":"/components/no-data/index",
+    "no-more-cmp": "/components/no-more/index"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

@@ -1,0 +1,15 @@
+/* components/no-data/index.wxss */
+.none{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.no-data{
+  width:200rpx;
+  margin-top: 300rpx;
+}
+.none-tips{
+  margin-top:30rpx;
+  font-size: 32rpx;
+  color: #c7c7c7;
+}

@@ -1,0 +1,45 @@
+<!--pages/search/search.wxml-->
+<!-- <scroll-view scroll-y style="widt:100%;height:{{screenHeight}}px" bindscroll="onScroll" bindscrolltolower="onLowder" bindscrolltoupper="onUpper"> -->
+<view class="container">
+  <view class="header">
+    <view class="search-input">
+      <icon type="search" size="14"></icon>
+      <input value="{{keyword}}" focus="true" confirm-type="search" placeholder="搜索" bindconfirm="onConfirm" bindinput="onInput"></input>
+      <image src="/images/cancel.png" style="width:20px;height:20px" bindtap="onCancel"></image>
+    </view>
+    <navigator open-type="navigateBack">取消</navigator>
+  </view>
+  <block wx:if="{{!shareLesson}}">
+    <view class="search-box">
+      <view class="search-title">
+        热门搜索
+      </view>
+      <view class="search-content">
+        <block wx:for="{{hotLesson}}" wx:key="*this">
+          <text bindtap="onConfirm" data-word="{{item}}">{{item}}</text>
+        </block>
+      </view>
+    </view>
+    <view class="search-box" wx:if="{{historySearch.length>0}}">
+      <view class="search-title">
+        历史搜索
+      </view>
+      <view class="search-content">
+        <block wx:for="{{historySearch}}" wx:key="*this">
+          <text bindtap="onConfirm" data-word="{{item}}">{{item}}</text>
+        </block>
+      </view>
+      <view class="clear-storage" bindtap="clearStorage">清除历史搜索</view>
+    </view>
+  </block>
+  <block wx:if="{{shareLesson}}">
+    <view class="container">
+      <block wx:for="{{lesson}}" wx:key="id">
+        <lesson-cmp lesson="{{item}}" bind:myEvent="onMyEvent"></lesson-cmp>
+      </block>
+      <no-data-cmp wx:if="{{noData}}"></no-data-cmp>
+      <no-more-cmp wx:if="{{noMore}}"></no-more-cmp>
+    </view>
+  </block>
+</view>
+<!-- </scroll-view> -->
